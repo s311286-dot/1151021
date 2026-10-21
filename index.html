@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鄭宥鈞 | 個人自我介紹 & 履歷</title>
+  <meta name="description" content="鄭宥鈞的個人自我介紹與生活履歷。熱愛排球、長笛與貓咪，崇尚簡約韓系質感的日常生活。">
+
+  <!-- Google Fonts: Noto Serif TC, Noto Sans TC, Cormorant Garamond, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       韓系簡約風格色彩系統 (Korean Aesthetic Design System)
+       ============================================================ */
+    :root {
+      --bg-cream: #FBF9F5;
+      --bg-subtle: #F4EFE6;
+      --card-bg: #FFFFFF;
+      --card-bg-translucent: rgba(255, 255, 255, 0.85);
+      
+      --text-main: #2D2825;
+      --text-sub: #7A7269;
+      --text-muted: #A39B91;
+      
+      --accent-warm: #C8966E;        /* 奶茶駝色 */
+      --accent-soft-green: #90A18B;   /* 鼠尾草綠 */
+      --accent-latte: #DFD3C3;       /* 溫潤拿鐵 */
+      --accent-peach: #E8B49E;       /* 柔杏粉 */
+      
+      --border-light: rgba(218, 209, 198, 0.55);
+      --border-card: rgba(230, 223, 214, 0.8);
+      
+      --shadow-sm: 0 4px 16px rgba(168, 150, 134, 0.06);
+      --shadow-md: 0 10px 30px rgba(168, 150, 134, 0.08);
+      --shadow-hover: 0 16px 40px rgba(168, 150, 134, 0.12);
+      
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --radius-full: 9999px;
+      
+      --transition-smooth: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* 基礎重置與排版 */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+      overflow-x: hidden;
+      position: relative;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(244, 239, 230, 0.7) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(232, 180, 158, 0.1) 0px, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    /* 韓系優雅襯線英文字體類 */
+    .font-serif {
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-smooth);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 容器佈局 */
+    .container {
+      width: 90%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* ============================================================
+       頂部導航列 (Minimalist Header)
+       ============================================================ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 249, 245, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-light);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 0;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text-main);
+    }
+
+    .brand-logo .dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--accent-warm);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .brand-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-left: 0.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      font-weight: 400;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1.5px;
+      background-color: var(--accent-warm);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-warm);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--text-main);
+      color: #FFF !important;
+      font-size: 0.85rem;
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--radius-full);
+      font-weight: 400;
+      box-shadow: 0 4px 12px rgba(45, 40, 37, 0.15);
+    }
+
+    .nav-action-btn:hover {
+      background: var(--accent-warm);
+      transform: translateY(-2px);
+    }
+
+    /* 手機選單切換按鈕 (簡約線條) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: var(--text-main);
+      margin: 5px 0;
+      transition: var(--transition-smooth);
+    }
+
+    /* ============================================================
+       HERO 首頁視覺區 (Editorial Magazine Look)
+       ============================================================ */
+    .hero-section {
+      padding: 5rem 0 4rem;
+      position: relative;
+    }
+
+    .hero-wrapper {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      padding: 0.35rem 0.95rem;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      color: var(--text-sub);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge .status-ping {
+      width: 7px;
+      height: 7px;
+      background-color: var(--accent-soft-green);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(144, 161, 139, 0.25);
+    }
+
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title .name-highlight {
+      position: relative;
+      display: inline-block;
+      color: var(--text-main);
+    }
+
+    .hero-title .name-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background-color: rgba(200, 150, 110, 0.22);
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-sub);
+      font-weight: 300;
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      color: var(--text-sub);
+      max-width: 500px;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .tag-item {
+      font-size: 0.82rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      color: var(--text-sub);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: var(--transition-smooth);
+    }
+
+    .tag-item:hover {
+      border-color: var(--accent-warm);
+      color: var(--accent-warm);
+      transform: translateY(-2px);
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .btn-primary {
+      background: var(--text-main);
+      color: #FFF;
+      padding: 0.85rem 1.8rem;
+      border-radius: var(--radius-full);
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 6px 20px rgba(45, 40, 37, 0.15);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-warm);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(200, 150, 110, 0.28);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--text-main);
+      padding: 0.85rem 1.6rem;
+      border-radius: var(--radius-full);
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid var(--border-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-warm);
+      color: var(--accent-warm);
+      transform: translateY(-3px);
+    }
+
+    /* 韓系立體雜誌風頭像卡片 */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .visual-card {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      border: 1px solid var(--border-card);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-smooth);
+    }
+
+    .visual-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+
+    .visual-image-box {
+      width: 100%;
+      height: 380px;
+      border-radius: calc(var(--radius-lg) - 8px);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #EFE8DE 0%, #DFD5C6 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    /* 幾何藝術人像插畫 (純 CSS 與 SVG 打造韓系雅緻插畫) */
+    .avatar-illustration {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: radial-gradient(circle at 50% 35%, #FFF6EC 0%, #E8DCCF 70%, #DACBB9 100%);
+    }
+
+    .avatar-svg {
+      width: 220px;
+      height: 220px;
+      filter: drop-shadow(0 15px 25px rgba(100, 80, 60, 0.12));
+    }
+
+    .floating-note {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1.2rem;
+      right: 1.2rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 0.85rem 1.1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .floating-note .quote {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .floating-note .author-sign {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--accent-warm);
+    }
+
+    /* 懸浮的小裝飾徽章 */
+    .floating-chip {
+      position: absolute;
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius-full);
+      padding: 0.45rem 0.95rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      animation: gentleFloat 4s ease-in-out infinite alternate;
+    }
+
+    .floating-chip-1 {
+      top: -15px;
+      right: 10px;
+      color: var(--accent-warm);
+    }
+
+    .floating-chip-2 {
+      bottom: -15px;
+      left: 10px;
+      color: var(--accent-soft-green);
+      animation-delay: -2s;
+    }
+
+    @keyframes gentleFloat {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+
+    /* ============================================================
+       章節通用標題 (Section Header)
+       ============================================================ */
+    .section-spacing {
+      padding: 5.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-kicker {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--accent-warm);
+      display: block;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      position: relative;
+      display: inline-block;
+      letter-spacing: 0.02em;
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--text-sub);
+      margin-top: 0.7rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ============================================================
+       關於我 (About Section)
+       ============================================================ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: stretch;
+    }
+
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .about-quote {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 1.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--accent-warm);
+    }
+
+    .about-text {
+      color: var(--text-sub);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.85;
+    }
+
+    .life-values-list {
+      list-style: none;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .life-value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      font-size: 0.92rem;
+      color: var(--text-sub);
+    }
+
+    .value-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--bg-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      color: var(--accent-warm);
+    }
+
+    /* 右側數據 / 亮點卡片群 */
+    .highlights-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .stat-pill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.6rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      transition: var(--transition-smooth);
+    }
+
+    .stat-pill-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-warm);
+    }
+
+    .stat-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--bg-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      border: 1px solid var(--border-light);
+    }
+
+    .stat-info h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-info p {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       三大核心興趣 (Hobbies & Passions)
+       ============================================================ */
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    .hobby-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem 1.8rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .hobby-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      transition: var(--transition-smooth);
+    }
+
+    .hobby-card.volleyball:hover::before {
+      background: #E0876A;
+    }
+    .hobby-card.flute:hover::before {
+      background: #90A18B;
+    }
+    .hobby-card.cats:hover::before {
+      background: #C8966E;
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .hobby-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hobby-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .hobby-badge-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      background: var(--bg-subtle);
+      color: var(--text-sub);
+    }
+
+    .hobby-icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.4rem;
+      background: var(--bg-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .hobby-card:hover .hobby-icon-circle {
+      transform: scale(1.1) rotate(6deg);
+    }
+
+    .hobby-card.volleyball .hobby-icon-circle {
+      background: #FDF1EC;
+    }
+    .hobby-card.flute .hobby-icon-circle {
+      background: #EEF4ED;
+    }
+    .hobby-card.cats .hobby-icon-circle {
+      background: #FDF5EC;
+    }
+
+    .hobby-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .hobby-en-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .hobby-desc {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      line-height: 1.75;
+      margin-bottom: 1.8rem;
+      flex-grow: 1;
+    }
+
+    .hobby-features {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1.2rem;
+    }
+
+    .hobby-feat-tag {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: var(--bg-cream);
+      color: var(--text-sub);
+      border: 1px solid var(--border-light);
+    }
+
+    /* ============================================================
+       生活剪影 / 韓系拍立得風格 (Lifestyle Gallery / Aesthetic Moodboard)
+       ============================================================ */
+    .polaroid-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .polaroid-card {
+      background: #FFFFFF;
+      padding: 1.2rem 1.2rem 1.6rem 1.2rem;
+      border-radius: 6px;
+      box-shadow: 0 8px 25px rgba(120, 100, 80, 0.08);
+      border: 1px solid rgba(220, 210, 200, 0.5);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .polaroid-card:hover {
+      transform: translateY(-5px) rotate(0.5deg);
+      box-shadow: 0 15px 35px rgba(120, 100, 80, 0.14);
+    }
+
+    .tape-deco {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 22px;
+      background: rgba(244, 230, 205, 0.65);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      z-index: 2;
+    }
+
+    .polaroid-photo-frame {
+      width: 100%;
+      height: 240px;
+      background: #EFE9DF;
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .polaroid-photo-frame svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .polaroid-caption {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .polaroid-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .polaroid-text {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+      margin-top: 0.2rem;
+    }
+
+    /* ============================================================
+       互動驚喜小區：給宥鈞的一顆愛心 / 貓咪拍拍
+       ============================================================ */
+    .interaction-strip {
+      background: linear-gradient(135deg, #FFFDFB 0%, #F5EFE6 100%);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 2.8rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .interact-left h3 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .interact-left p {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+    }
+
+    .interact-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-cat-pet {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 0.8rem 1.4rem;
+      border-radius: var(--radius-full);
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-cat-pet:hover {
+      transform: scale(1.05);
+      border-color: var(--accent-warm);
+      color: var(--accent-warm);
+    }
+
+    .btn-cat-pet:active {
+      transform: scale(0.96);
+    }
+
+    .pet-counter-badge {
+      background: var(--bg-subtle);
+      font-size: 0.8rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      color: var(--accent-warm);
+      font-weight: 600;
+    }
+
+    /* 浮動愛心特效容器 */
+    #hearts-container {
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+    }
+
+    .flying-heart {
+      position: absolute;
+      font-size: 1.4rem;
+      animation: flyUp 1.4s ease-out forwards;
+      pointer-events: none;
+    }
+
+    @keyframes flyUp {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0.7) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(calc(var(--random-x) * 1px), -120px) scale(1.4) rotate(15deg);
+      }
+    }
+
+    /* ============================================================
+       聯絡方式 / 履歷尾聲 (Contact & Footer Section)
+       ============================================================ */
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-badge {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: var(--accent-warm);
+      margin-bottom: 0.6rem;
+      font-style: italic;
+    }
+
+    .contact-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    .contact-card p {
+      color: var(--text-sub);
+      font-size: 0.98rem;
+      max-width: 480px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.8;
+    }
+
+    .social-pills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.3rem;
+      background: var(--bg-cream);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .social-pill-btn:hover {
+      background: var(--text-main);
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* 複製成功提示 (Toast) */
+    .toast-msg {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--text-main);
+      color: #FFF;
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 1000;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* 頁尾 Footer */
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .footer-signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--text-main);
+      letter-spacing: 0.05em;
+    }
+
+    /* ============================================================
+       捲動淡入動畫 (Scroll Fade-In Animation)
+       ============================================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.85s cubic-bezier(0.2, 0.8, 0.2, 1),
+                  transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+      will-change: opacity, transform;
+    }
+
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 遞延動畫 (Staggered Animation Delays) */
+    .delay-1 { transition-delay: 0.12s; }
+    .delay-2 { transition-delay: 0.24s; }
+    .delay-3 { transition-delay: 0.36s; }
+
+    /* ============================================================
+       RWD 響應式適配 (Mobile & Tablet Responsive)
+       ============================================================ */
+    @media (max-width: 900px) {
+      .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-title {
+        font-size: 2.6rem;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-tags {
+        justify-content: center;
+      }
+
+      .hero-cta-group {
+        justify-content: center;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hobbies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .polaroid-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .interaction-strip {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav-links {
+        display: none; /* 手機端優雅收合或折疊 */
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-section {
+        padding: 3rem 0 2rem;
+      }
+
+      .about-card {
+        padding: 1.8rem 1.4rem;
+      }
+
+      .contact-card {
+        padding: 2.5rem 1.2rem;
+      }
+
+      .contact-card h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頂部簡約韓系導航 (Navbar) -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo" id="nav-brand">
+        <span>鄭宥鈞</span>
+        <span class="dot"></span>
+        <span class="brand-en">CHENG YOU-JUN</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" id="nav-link-about">關於我</a></li>
+        <li><a href="#hobbies" id="nav-link-hobbies">生活愛好</a></li>
+        <li><a href="#gallery" id="nav-link-gallery">日常剪影</a></li>
+        <li><a href="#contact" id="nav-link-contact">聯絡聯繫</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-action-btn" id="nav-btn-contact">
+        <span>與我聊聊</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- 首頁 HERO 雜誌感視覺區 -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-wrapper">
+      
+      <!-- 左側文字介紹 -->
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <span class="status-ping"></span>
+          <span>生活・音樂・運動・貓咪</span>
+        </div>
+
+        <h1 class="hero-title">
+          你好，我是 <span class="name-highlight">鄭宥鈞</span>
+        </h1>
+
+        <p class="hero-subtitle font-serif">
+          "Embracing gentle rhythms, high jumps, and soft paws."
+        </p>
+
+        <p class="hero-desc">
+          崇尚簡約與溫潤的韓系生活美學。喜歡在排球場上感受起跳扣殺的澎湃心跳，在長笛旋律中傾聽心靈的沉靜，並在跟貓咪玩耍的純粹時光裡，找回生活最溫柔的模樣。
+        </p>
+
+        <!-- 韓系標籤 -->
+        <div class="hero-tags">
+          <span class="tag-item">🏐 熱血排球員</span>
+          <span class="tag-item">🎶 長笛樂音日常</span>
+          <span class="tag-item">🐾 專業貓奴</span>
+          <span class="tag-item">☕ 簡約生活家</span>
+        </div>
+
+        <!-- 按鈕群 -->
+        <div class="hero-cta-group">
+          <a href="#hobbies" class="btn-primary" id="hero-btn-explore">
+            <span>探索我的日常</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+          </a>
+          <a href="#about" class="btn-secondary" id="hero-btn-about">認識更多</a>
+        </div>
+      </div>
+
+      <!-- 右側韓系雜誌相框插畫卡片 -->
+      <div class="hero-visual fade-in delay-1">
+        <div class="visual-card">
+          <!-- 裝飾小氣泡 -->
+          <div class="floating-chip floating-chip-1">
+            <span>🏐</span>
+            <span>Volleyball Spirit</span>
+          </div>
+          <div class="floating-chip floating-chip-2">
+            <span>🐾</span>
+            <span>Cat Lover</span>
+          </div>
+
+          <div class="visual-image-box">
+            <div class="avatar-illustration">
+              <!-- 精緻手繪感向量插畫：人物、排球、長笛與貓咪意象 -->
+              <svg class="avatar-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- 背景柔光圓 -->
+                <circle cx="120" cy="120" r="95" fill="#FAF5ED" stroke="#DFD5C6" stroke-width="2"/>
+                
+                <!-- 長笛線條示意 -->
+                <line x1="50" y1="180" x2="190" y2="40" stroke="#C8966E" stroke-width="4" stroke-linecap="round" opacity="0.45"/>
+                <circle cx="90" cy="140" r="3" fill="#C8966E" opacity="0.7"/>
+                <circle cx="110" cy="120" r="3" fill="#C8966E" opacity="0.7"/>
+                <circle cx="130" cy="100" r="3" fill="#C8966E" opacity="0.7"/>
+                <circle cx="150" cy="80" r="3" fill="#C8966E" opacity="0.7"/>
+
+                <!-- 人物衣著輪廓 (簡約韓系米色高領) -->
+                <path d="M70 215 C70 175, 170 175, 170 215 Z" fill="#E8DDD0"/>
+                <path d="M100 175 L140 175 L135 155 L105 155 Z" fill="#D8CAB9"/>
+                
+                <!-- 脖子與下巴 -->
+                <rect x="110" y="145" width="20" height="20" fill="#F4DFD0" rx="4"/>
+                <ellipse cx="120" cy="130" rx="32" ry="36" fill="#F8E5D8"/>
+                
+                <!-- 韓系質感髮型 (蓬鬆中分碎髮) -->
+                <path d="M86 130 C86 90, 154 90, 154 130 C154 125, 148 105, 135 102 C120 100, 105 105, 96 115 C90 120, 88 128, 86 130 Z" fill="#3A3330"/>
+                <path d="M96 115 C108 118, 116 128, 120 135 C124 128, 132 118, 144 115" stroke="#3A3330" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- 溫柔五官 -->
+                <!-- 眼睛 (溫柔微笑線) -->
+                <path d="M104 128 Q111 133 115 129" stroke="#524843" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <path d="M125 129 Q129 133 136 128" stroke="#524843" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <!-- 腮紅 -->
+                <circle cx="102" cy="136" r="4.5" fill="#EFA99B" opacity="0.45"/>
+                <circle cx="138" cy="136" r="4.5" fill="#EFA99B" opacity="0.45"/>
+                <!-- 淺淺笑容 -->
+                <path d="M116 142 Q120 146 124 142" stroke="#68554B" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+                <!-- 趴在肩膀上的可愛小貓咪 -->
+                <ellipse cx="160" cy="180" rx="18" ry="16" fill="#FFFBF5" stroke="#E2D5C5" stroke-width="1.5"/>
+                <!-- 貓耳朵 -->
+                <polygon points="147,170 152,158 158,168" fill="#FFFBF5" stroke="#E2D5C5" stroke-width="1.5"/>
+                <polygon points="164,168 170,158 175,170" fill="#FFFBF5" stroke="#E2D5C5" stroke-width="1.5"/>
+                <!-- 貓臉瞇瞇眼 -->
+                <path d="M152 178 Q155 180 158 178" stroke="#7A685D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <path d="M162 178 Q165 180 168 178" stroke="#7A685D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <ellipse cx="160" cy="182" rx="1.5" ry="1" fill="#EFA99B"/>
+                
+                <!-- 排球幾何圖案 -->
+                <g transform="translate(48, 138) scale(0.65)">
+                  <circle cx="25" cy="25" r="24" fill="#FFFFFF" stroke="#3A3330" stroke-width="2"/>
+                  <path d="M25 1 Q25 25 49 25" stroke="#3A3330" stroke-width="1.8" fill="none"/>
+                  <path d="M25 49 Q25 25 1 25" stroke="#3A3330" stroke-width="1.8" fill="none"/>
+                  <path d="M7 8 Q25 25 42 41" stroke="#3A3330" stroke-width="1.8" fill="none"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- 卡片底部小語 -->
+            <div class="floating-note">
+              <span class="quote">動靜皆宜，享受當下</span>
+              <span class="author-sign">You-Jun. C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 關於我 (About Section) -->
+  <section class="section-spacing" id="about">
+    <div class="container">
+      
+      <div class="section-header fade-in">
+        <span class="section-kicker">About Me</span>
+        <h2 class="section-title">關於宥鈞</h2>
+        <p class="section-desc">在動靜之間尋找生活平衡，以簡單真摯的心感受世界</p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- 左側自我介紹長文 -->
+        <div class="about-card fade-in">
+          <div>
+            <blockquote class="about-quote">
+              「在球場上感受起跳的痛快，在長笛旋律裡沉澱思緒，回到家還有毛茸茸的貓咪在等著。」
+            </blockquote>
+
+            <p class="about-text">
+              我是<strong>鄭宥鈞</strong>。對我來說，生活不需要過多複雜的包裝，簡單、舒服、純粹就是最理想的狀態。
+            </p>
+            <p class="about-text">
+              我熱愛運動，特別是需要默契與爆發力的排球；我也熱愛音樂，長笛陪伴我度過許多需要專注與靜心的午後；而下課或工作之餘，最棒的放鬆莫過於逗逗貓咪，看著牠們無憂無慮打滾的模樣。
+            </p>
+          </div>
+
+          <div class="life-values-list">
+            <div class="life-value-item">
+              <div class="value-icon">✦</div>
+              <div>
+                <strong>生活態度</strong>：崇尚韓系簡約風尚，注重留白與細膩質感。
+              </div>
+            </div>
+            <div class="life-value-item">
+              <div class="value-icon">✦</div>
+              <div>
+                <strong>個人特質</strong>：溫和隨和、樂於團隊合作、善於傾聽與觀察。
+              </div>
+            </div>
+            <div class="life-value-item">
+              <div class="value-icon">✦</div>
+              <div>
+                <strong>日常追求</strong>：把喜愛的事物做到專注，在平淡的時光裡閃閃發亮。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右側三塊生活數據卡片 -->
+        <div class="highlights-column fade-in delay-1">
+          
+          <div class="stat-pill-card">
+            <div class="stat-icon-wrap">🏐</div>
+            <div class="stat-info">
+              <h4>熱血排球・凝聚與默契</h4>
+              <p>不論是接發球的專注，還是奮力起跳的瞬間，排球教會我堅持到底與相信隊友。</p>
+            </div>
+          </div>
+
+          <div class="stat-pill-card">
+            <div class="stat-icon-wrap">🎶</div>
+            <div class="stat-info">
+              <h4>長笛樂音・氣息與沉靜</h4>
+              <p>吹奏長笛需要細緻的氣息調配，在每一個清脆純淨的音符中，享受獨處時的專注力量。</p>
+            </div>
+          </div>
+
+          <div class="stat-pill-card">
+            <div class="stat-icon-wrap">🐾</div>
+            <div class="stat-info">
+              <h4>貓咪日常・純粹的療癒</h4>
+              <p>跟貓咪玩逗貓棒、梳毛、聽著滿足的呼嚕聲，是生活中不可或缺的心靈充電站。</p>
+            </div>
+          </div>
+
+          <div class="stat-pill-card">
+            <div class="stat-icon-wrap">☕</div>
+            <div class="stat-info">
+              <h4>韓系簡約・生活美學哲學</h4>
+              <p>偏好乾淨俐落的線條、溫暖純和的色系，用心打理生活中的每個小細節。</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 三大核心興趣 (Hobbies & Passions) -->
+  <section class="section-spacing" id="hobbies" style="background-color: var(--bg-subtle);">
+    <div class="container">
+      
+      <div class="section-header fade-in">
+        <span class="section-kicker">My Passions</span>
+        <h2 class="section-title">我的三大愛好</h2>
+        <p class="section-desc">運動、音樂與萌寵，構成我生活裡最美好的三部曲</p>
+      </div>
+
+      <div class="hobbies-grid">
+        
+        <!-- 卡片 1: 打排球 -->
+        <div class="hobby-card volleyball fade-in">
+          <div class="hobby-header">
+            <span class="hobby-number">01</span>
+            <span class="hobby-badge-tag">Sports & Energy</span>
+          </div>
+          <div class="hobby-icon-circle">🏐</div>
+          <h3 class="hobby-title">打排球</h3>
+          <p class="hobby-en-title">Volleyball Passion</p>
+          <p class="hobby-desc">
+            排球是一項球不能落地的運動，每一分都是團隊心血的凝聚。我熱愛站在球場上的專注感，奔跑、喊聲、救球，與隊友在空中擊掌的瞬間，所有壓力都在汗水中化為痛快與熱情。
+          </p>
+          <ul class="hobby-features">
+            <li class="hobby-feat-tag"># 團隊信任</li>
+            <li class="hobby-feat-tag"># 反應敏捷</li>
+            <li class="hobby-feat-tag"># 起跳躍動</li>
+            <li class="hobby-feat-tag"># 汗水與熱血</li>
+          </ul>
+        </div>
+
+        <!-- 卡片 2: 吹長笛 -->
+        <div class="hobby-card flute fade-in delay-1">
+          <div class="hobby-header">
+            <span class="hobby-number">02</span>
+            <span class="hobby-badge-tag">Music & Harmony</span>
+          </div>
+          <div class="hobby-icon-circle">🎶</div>
+          <h3 class="hobby-title">吹長笛</h3>
+          <p class="hobby-en-title">Flute Melodies</p>
+          <p class="hobby-desc">
+            長笛如同靈魂的呼吸。銀管流瀉出的清亮樂音，有時如晨曦微風，有時似林間小溪。在反覆練習音階與樂句的過程中，我學會了沉著與耐性，也找到了心靈最寧靜的歸屬。
+          </p>
+          <ul class="hobby-features">
+            <li class="hobby-feat-tag"># 氣息掌控</li>
+            <li class="hobby-feat-tag"># 優雅純淨</li>
+            <li class="hobby-feat-tag"># 專注靜心</li>
+            <li class="hobby-feat-tag"># 樂譜細節</li>
+          </ul>
+        </div>
+
+        <!-- 卡片 3: 跟貓咪玩 -->
+        <div class="hobby-card cats fade-in delay-2">
+          <div class="hobby-header">
+            <span class="hobby-number">03</span>
+            <span class="hobby-badge-tag">Warmth & Companionship</span>
+          </div>
+          <div class="hobby-icon-circle">🐾</div>
+          <h3 class="hobby-title">跟貓咪玩</h3>
+          <p class="hobby-en-title">Play with Cats</p>
+          <p class="hobby-desc">
+            柔軟的肉球、靈活的小尾巴，還有偶爾傲嬌卻又貼過來蹭頭的溫度。手拿逗貓棒跟牠們鬥智鬥勇，或是靜靜看著牠們曬太陽睡懶覺，就是世界上最療癒的事情，疲憊一掃而空。
+          </p>
+          <ul class="hobby-features">
+            <li class="hobby-feat-tag"># 逗貓大師</li>
+            <li class="hobby-feat-tag"># 肉球療癒</li>
+            <li class="hobby-feat-tag"># 幸福呼嚕聲</li>
+            <li class="hobby-feat-tag"># 陪伴的溫柔</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 日常剪影 (韓系拍立得風格卡片) -->
+  <section class="section-spacing" id="gallery">
+    <div class="container">
+      
+      <div class="section-header fade-in">
+        <span class="section-kicker">Moments</span>
+        <h2 class="section-title">生活剪影</h2>
+        <p class="section-desc">定格日常中微小而閃閃發光的片段</p>
+      </div>
+
+      <div class="polaroid-grid">
+        
+        <!-- 拍立得 1: 球場時光 -->
+        <div class="polaroid-card fade-in">
+          <div class="tape-deco"></div>
+          <div class="polaroid-photo-frame">
+            <svg viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="320" height="240" fill="#E8DEC8"/>
+              <!-- 球場地板木紋與球網線條 -->
+              <rect y="170" width="320" height="70" fill="#DFCDB4"/>
+              <line x1="0" y1="170" x2="320" y2="170" stroke="#C9B497" stroke-width="2"/>
+              <line x1="160" y1="20" x2="160" y2="170" stroke="#7A6F62" stroke-width="3"/>
+              <!-- 象徵排球 -->
+              <circle cx="160" cy="80" r="34" fill="#FFFFFF" stroke="#3A3330" stroke-width="2"/>
+              <path d="M160 46 C160 80 194 80 194 80" stroke="#3A3330" stroke-width="2" fill="none"/>
+              <path d="M160 114 C160 80 126 80 126 80" stroke="#3A3330" stroke-width="2" fill="none"/>
+              <path d="M136 56 C160 80 184 104 184 104" stroke="#3A3330" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="polaroid-caption">
+            <span class="polaroid-tag">COURT & SUNSHINE</span>
+            <p class="polaroid-text">週六早晨的排球場，每一次托球的專注</p>
+          </div>
+        </div>
+
+        <!-- 拍立得 2: 長笛與午後樂譜 -->
+        <div class="polaroid-card fade-in delay-1">
+          <div class="tape-deco"></div>
+          <div class="polaroid-photo-frame">
+            <svg viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="320" height="240" fill="#EAE5DC"/>
+              <!-- 樂譜五線譜線條 -->
+              <g opacity="0.35" stroke="#685F53" stroke-width="1.2">
+                <line x1="40" y1="60" x2="280" y2="60"/>
+                <line x1="40" y1="72" x2="280" y2="72"/>
+                <line x1="40" y1="84" x2="280" y2="84"/>
+                <line x1="40" y1="96" x2="280" y2="96"/>
+                <line x1="40" y1="108" x2="280" y2="108"/>
+              </g>
+              <!-- 音符意象 -->
+              <circle cx="90" cy="84" r="6" fill="#3A3330"/>
+              <line x1="96" y1="84" x2="96" y2="50" stroke="#3A3330" stroke-width="2"/>
+              <circle cx="150" cy="72" r="6" fill="#3A3330"/>
+              <line x1="156" y1="72" x2="156" y2="40" stroke="#3A3330" stroke-width="2"/>
+              <!-- 長笛金屬管身斜躺 -->
+              <line x1="40" y1="180" x2="280" y2="100" stroke="#C8966E" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="120" cy="153" r="3" fill="#FFF"/>
+              <circle cx="150" cy="143" r="3" fill="#FFF"/>
+              <circle cx="180" cy="133" r="3" fill="#FFF"/>
+            </svg>
+          </div>
+          <div class="polaroid-caption">
+            <span class="polaroid-tag">AFTERNOON SONATA</span>
+            <p class="polaroid-text">陽光斜照的客廳，窗邊悠揚的長笛旋律</p>
+          </div>
+        </div>
+
+        <!-- 拍立得 3: 貓咪與午後小憩 -->
+        <div class="polaroid-card fade-in delay-2">
+          <div class="tape-deco"></div>
+          <div class="polaroid-photo-frame">
+            <svg viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="320" height="240" fill="#F2EBE1"/>
+              <!-- 溫暖毛毯與軟萌貓咪小插畫 -->
+              <ellipse cx="160" cy="135" rx="75" ry="48" fill="#FFFFFF"/>
+              <!-- 貓耳朵 -->
+              <polygon points="110,105 125,75 140,100" fill="#FFFFFF" stroke="#DFD3C3" stroke-width="2"/>
+              <polygon points="180,100 195,75 210,105" fill="#FFFFFF" stroke="#DFD3C3" stroke-width="2"/>
+              <!-- 貓咪睡臉 (安詳弧線) -->
+              <path d="M135 125 Q145 133 155 125" stroke="#68554B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M165 125 Q175 133 185 125" stroke="#68554B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <!-- 粉色小肉球印 -->
+              <ellipse cx="205" cy="145" rx="7" ry="5" fill="#E8B49E" opacity="0.6"/>
+              <circle cx="198" cy="136" r="2.5" fill="#E8B49E" opacity="0.6"/>
+              <circle cx="205" cy="134" r="2.5" fill="#E8B49E" opacity="0.6"/>
+              <circle cx="212" cy="136" r="2.5" fill="#E8B49E" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="polaroid-caption">
+            <span class="polaroid-tag">SOFT & PAWS</span>
+            <p class="polaroid-text">玩逗貓棒累了，窩在身旁打呼嚕的毛孩</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 互動小功能：拍拍貓咪 / 傳送愛心 -->
+      <div class="interaction-strip fade-in">
+        <div class="interact-left">
+          <h3>給宥鈞一個溫暖的打氣 🐾</h3>
+          <p>點擊按鈕拍拍貓咪或為宥鈞送上一顆愛心，感受這份簡單純粹的快樂！</p>
+        </div>
+        <div class="interact-btn-group">
+          <button class="btn-cat-pet" id="btn-pet-cat">
+            <span>🐾 摸摸小貓咪</span>
+            <span class="pet-counter-badge" id="pet-count">0 次被摸</span>
+          </button>
+          <button class="btn-cat-pet" id="btn-cheer">
+            <span>❤️ 為排球加油</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 聯絡與結語區 (Contact & Resume Closing) -->
+  <section class="section-spacing" id="contact">
+    <div class="container">
+      
+      <div class="contact-card fade-in">
+        <span class="contact-badge">Let's Connect</span>
+        <h2>很高興遇見你</h2>
+        <p>
+          喜歡簡約、熱愛生活、享受當下。如果您想聊聊排球技巧、交流長笛音樂、分享家裡的可愛貓咪，或有任何合作交流想法，都非常歡迎隨時與我聯繫！
+        </p>
+
+        <div class="social-pills">
+          <button class="social-pill-btn" id="btn-copy-email" title="點擊複製 Email">
+            <span>✉️</span>
+            <span>youjun.cheng@example.com</span>
+            <span style="font-size:0.75rem; color:var(--text-muted);">(點擊複製)</span>
+          </button>
+          <a href="#" class="social-pill-btn" onclick="alert('歡迎來到宥鈞的簡約生活天地！✨'); return false;">
+            <span>📸</span>
+            <span>Instagram / 日常紀錄</span>
+          </a>
+          <a href="#" class="social-pill-btn" onclick="alert('感謝您的打氣！願您的每一天都充滿陽光與笑意 ☀️'); return false;">
+            <span>🏐</span>
+            <span>Volleyball Team / 球友招募</span>
+          </a>
+        </div>
+
+        <div>
+          <a href="#hero" class="btn-primary" style="display:inline-flex;">回到頂部 ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 浮動愛心特效容器 -->
+  <div id="hearts-container"></div>
+
+  <!-- 複製成功的 Toast 訊息 -->
+  <div class="toast-msg" id="toast">
+    <span>✓</span>
+    <span>已成功複製電子信箱至剪貼簿！</span>
+  </div>
+
+  <!-- 頁尾 (Footer) -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-signature">Cheng You-Jun • 鄭宥鈞</div>
+      <p>Simple Korean Aesthetic Portfolio • Crafted with Care & Warmth</p>
+      <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem;">
+        © 2026 鄭宥鈞 (CHENG YOU-JUN). All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       互動與動畫 Javascript (Vanilla JS)
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      /* 1. 捲動淡入動畫 (Intersection Observer) */
+      const fadeElements = document.querySelectorAll('.fade-in');
+
+      const fadeObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // 一旦觸發淡入後就停止觀察，保持簡約順暢
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      fadeElements.forEach(el => fadeObserver.observe(el));
+
+
+      /* 2. 摸摸小貓咪計數器與飄愛心互動 */
+      const petBtn = document.getElementById('btn-pet-cat');
+      const cheerBtn = document.getElementById('btn-cheer');
+      const petCountEl = document.getElementById('pet-count');
+      const heartsContainer = document.getElementById('hearts-container');
+      let petCount = 0;
+
+      function spawnFloatingEmoji(e, emojiChar) {
+        const heart = document.createElement('span');
+        heart.classList.add('flying-heart');
+        heart.textContent = emojiChar;
+
+        // 計算點擊位置
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = rect.left + rect.width / 2 + (Math.random() * 40 - 20);
+        const y = rect.top + (Math.random() * 20 - 10);
+
+        heart.style.left = `${x}px`;
+        heart.style.top = `${y}px`;
+        heart.style.setProperty('--random-x', (Math.random() * 100 - 50));
+
+        heartsContainer.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 1400);
+      }
+
+      if (petBtn) {
+        petBtn.addEventListener('click', (e) => {
+          petCount++;
+          petCountEl.textContent = `${petCount} 次被摸 😽`;
+          spawnFloatingEmoji(e, '🐾');
+          setTimeout(() => spawnFloatingEmoji(e, '✨'), 150);
+        });
+      }
+
+      if (cheerBtn) {
+        cheerBtn.addEventListener('click', (e) => {
+          spawnFloatingEmoji(e, '🏐');
+          setTimeout(() => spawnFloatingEmoji(e, '❤️'), 150);
+        });
+      }
+
+
+      /* 3. 複製 Email 至剪貼簿與 Toast 提示 */
+      const copyEmailBtn = document.getElementById('btn-copy-email');
+      const toast = document.getElementById('toast');
+
+      if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+          const email = "youjun.cheng@example.com";
+          
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(() => {
+              showToast();
+            }).catch(() => {
+              fallbackCopy(email);
+            });
+          } else {
+            fallbackCopy(email);
+          }
+        });
+      }
+
+      function fallbackCopy(text) {
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast();
+      }
+
+      function showToast() {
+        if (!toast) return;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2800);
+      }
+
+      /* 4. 平滑導航滾動處理 */
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
